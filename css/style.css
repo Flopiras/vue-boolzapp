@@ -29,11 +29,24 @@ main{
 }
 
 
+/* ROOTS */
+:root{
+    --top-bgr: #009688;
+    --bottom-bgr: #D8DBD6;
+    --notify-color: #8EDAFC;
+    --section-bgr: #EAEAEA;
+    --text-section: #F3EEEA;
+    --icons-light: #B1B1B1;
+    --icons-dark: #6B7376;
+}
+
 /* BACKGROUND */
 #background{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background: rgb(0,150,136);
+    background: linear-gradient(180deg, rgba(0,150,136,1) 15%, rgba(216,219,214,1) 15%);
 }
 
 /* MAIN */
