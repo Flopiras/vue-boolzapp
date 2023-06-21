@@ -27,7 +27,15 @@
         <main class="container ">
             <div class="row">
                 <div id="contacts-side" class="col-4">
-                    <section id="user"></section>
+                    <section id="user" class="d-flex">
+                        <div class="user-left">
+                            <img class="avatar mx-2" src="" :alt="user.name">
+                            <span class="h6">{{ user.name }}</span>
+                        </div>
+                        <div class="user-right">
+
+                        </div>
+                    </section>
                     <section id="notifications"></section>
                     <section id="search"></section>
                     <section id="contacts">
