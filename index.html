@@ -57,8 +57,9 @@
                     </section>
                     <section id="contacts">
                         <ul>
-                            <li v-for="contact in contacts" class=" border-bottom">
-                                <img class="avatar my-2" :src="contactImage(contact)" :alt="contact.name">
+                            <li v-for="contact in contacts" class="border-bottom d-flex">
+                                <img class="avatar m-2" :src="contactImage(contact)" :alt="contact.name">
+                                <h6>{{ contact.name }}</h6>
                             </li>
                         </ul>
                     </section>

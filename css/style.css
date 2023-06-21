@@ -93,6 +93,11 @@ main{
     background-color: white;
 }
 
+#contacts li{
+    justify-content: flex-start;
+    align-items: center;
+}
+
 /* chat-side */
 #chat-side{
     padding: 0;
