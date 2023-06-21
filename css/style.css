@@ -41,8 +41,7 @@ li{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: rgb(0,150,136);
-    background: linear-gradient(180deg, rgba(0,150,136,1) 15%, rgba(216,219,214,1) 15%);
+    background-image: linear-gradient(var(--top-bgr) 15%, var(--bottom-bgr) 15%);
 }
 
 /* MAIN */
