@@ -56,6 +56,11 @@ main{
 }
 
 /* contacts-side */
+#contacts-side{
+    padding: 0;
+    border-right: 1px solid var(--icons-light);
+}
+/* user */
 #user{
     justify-content: space-between;
     align-items: center;
@@ -65,11 +70,7 @@ main{
     color: var(--icons-light);
 }
 
-#contacts-side{
-    padding: 0;
-    border-right: 1px solid var(--icons-light);
-}
-
+/* notifications */
 #notifications{
     background-color: var(--notify-color);
     justify-content: flex-start;
@@ -83,13 +84,15 @@ main{
     height: 50px;
     border-radius: 50%;
     background-color: white;
-    margin-left: 5px;
 }
-
 
 .fa-bell-slash{
     color: var(--notify-color);
     translate: 10px 10px;
+}
+
+#notifications a{
+    color: var(--icons-dark);
 }
 
 #contacts{
