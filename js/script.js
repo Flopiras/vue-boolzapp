@@ -1,11 +1,11 @@
 console.log('Vue ok', Vue);
 
 const app = Vue.createApp({
-    name: 'Bootzap',
+    name: 'Boolzap',
     data() {
         return{
             user: {
-                name: 'Nome Utente',
+                name: 'Floriana',
                 avatar: '_io'
               },
               contacts: [
@@ -203,7 +203,10 @@ const app = Vue.createApp({
 
 
         }
-    }
+    },
+    computed() {
+
+    },
 });
 
-app.mount('');
+app.mount('#root');
