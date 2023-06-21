@@ -212,15 +212,17 @@ const app = Vue.createApp({
 
             return image
         },
-        contactImage() {
-            const {contact} = this.contacts;
+       
+    },
+    methods: {
+        contactImage(contact) {
             const avatar = contact.avatar;
 
             let image = `img/avatar${avatar}.jpg`;
 
             return image
         }
-    },
+    }
 });
 
 app.mount('#root');

@@ -89,7 +89,8 @@ main{
 
 #contacts{
     overflow-y: scroll;
-    height: calc((100vh - 40px) - 190px);
+    /* height: calc((100vh - 40px) - 190px); */
+    background-color: white;
 }
 
 /* chat-side */
