@@ -12,7 +12,9 @@ main{
 }
 
 #user,
-#notifications{
+#notifications,
+#header-chat,
+#footer-chat{
     height: 70px;
     border: 1px solid green;
 }
@@ -43,4 +45,10 @@ main{
 #contacts{
     overflow-y: scroll;
     height: calc((100vh - 40px) - 190px);
+}
+
+/* chat-side */
+#main-chat{
+    overflow-y: scroll;
+    height: calc((100vh - 40px) - 145px);
 }
