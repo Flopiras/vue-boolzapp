@@ -1,17 +1,3 @@
-/* TEMPORARY */
-
-#user,
-#notifications,
-#header-chat,
-#footer-chat{
-    height: 70px;
-}
-
-#search{
-    height: 45px;
-}
-
-
 /* ROOTS */
 :root{
     --top-bgr: #009688;
@@ -93,6 +79,12 @@ main{
 
 #notifications a{
     color: var(--icons-dark);
+}
+
+/* search */
+#basic-addon1{
+    background-color: white;
+    border-right: 0 ;
 }
 
 #contacts{

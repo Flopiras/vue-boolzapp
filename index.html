@@ -27,7 +27,7 @@
         <main class="container ">
             <div class="row">
                 <div id="contacts-side" class="col-4">
-                    <section id="user" class="d-flex">
+                    <section id="user" class="d-flex p-2">
                         <div class="user-left">
                             <img class="avatar mx-2" :src="userImage" :alt="user.name">
                             <span class="h6">{{ user.name }}</span>
@@ -38,7 +38,7 @@
                             <i class="fa-solid fa-ellipsis-vertical fa-xl mx-2"></i>
                         </div>
                     </section>
-                    <section id="notifications" class="d-flex">
+                    <section id="notifications" class="d-flex p-2">
                         <div id="bell" class="mx-2">
                             <i class="fa-solid fa-bell-slash fa-xl"></i>
                         </div>
@@ -47,7 +47,14 @@
                             <a href="#">Attiva notifiche desktop</a>
                         </div>
                     </section>
-                    <section id="search"></section>
+                    <section id="search" class="p-2">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text border-end-0" id="basic-addon1"><i
+                                    class="fa-solid fa-magnifying-glass"></i></span>
+                            <input type="text" class="form-control" placeholder="  Cerca o inizia una nuova chat"
+                                aria-describedby="basic-addon1">
+                        </div>
+                    </section>
                     <section id="contacts">
                         <ul>
                             <li></li>
@@ -56,9 +63,9 @@
 
                 </div>
                 <div id="chat-side" class="col-8">
-                    <section id="header-chat"></section>
-                    <section id="main-chat"></section>
-                    <section id="footer-chat"></section>
+                    <section id="header-chat" class="p-2"></section>
+                    <section id="main-chat" class="p-2"></section>
+                    <section id="footer-chat" class="p-2"></section>
 
                 </div>
             </div>
