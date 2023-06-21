@@ -35,6 +35,12 @@ li{
     list-style: none;
 }
 
+img.avatar{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
 
 /* BACKGROUND */
 #root{
@@ -50,6 +56,11 @@ main{
 }
 
 /* contacts-side */
+#user{
+    justify-content: space-between;
+    align-items: center;
+}
+
 #contacts-side{
     padding: 0;
     border-right: 1px solid var(--icons-light);
