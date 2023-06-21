@@ -1,31 +1,14 @@
 /* TEMPORARY */
-main{
-    border: 2px solid black;
-}
-
-#contacts-side{
-    border: 2px solid green;
-}
-
-#chat-side{
-    border: 2px solid green;
-}
 
 #user,
 #notifications,
 #header-chat,
 #footer-chat{
     height: 70px;
-    border: 1px solid green;
 }
 
 #search{
     height: 45px;
-    border: 1px solid green;
-}
-#contacts,
-#contacts li{
-    border: 1px solid green;
 }
 
 
@@ -39,6 +22,15 @@ main{
     --icons-light: #B1B1B1;
     --icons-dark: #6B7376;
 }
+
+/* GENERAL */
+#user,
+#search,
+#contacts,
+#header-chat{
+    background-color: var(--section-bgr);
+}
+
 
 /* BACKGROUND */
 #background{
@@ -55,13 +47,31 @@ main{
 }
 
 /* contacts-side */
+#contacts-side{
+    padding: 0;
+    border-right: 1px solid var(--icons-light);
+}
+
+#notifications{
+    background-color: var(--notify-color);
+}
+
 #contacts{
     overflow-y: scroll;
     height: calc((100vh - 40px) - 190px);
 }
 
 /* chat-side */
+#chat-side{
+    padding: 0;
+}
+
 #main-chat{
+    background-image: url(../img/mine.jpg) ;
     overflow-y: scroll;
     height: calc((100vh - 40px) - 145px);
+}
+
+#footer-chat{
+    background-color: var(--text-section);
 }
