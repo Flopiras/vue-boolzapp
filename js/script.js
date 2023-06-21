@@ -204,8 +204,14 @@ const app = Vue.createApp({
 
         }
     },
-    computed() {
+    computed: {
+        userImage() {
+            const avatar = this.user.avatar;
 
+            let image = `img/avatar${avatar}.jpg`;
+
+            return image
+        },
     },
 });
 
