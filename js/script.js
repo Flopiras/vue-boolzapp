@@ -8,7 +8,7 @@ const app = Vue.createApp({
                 name: 'Floriana',
                 avatar: '_io'
               },
-              contacts: [
+            contacts: [
                 {
                   id: 1,
                   name: 'Michele',
@@ -212,6 +212,14 @@ const app = Vue.createApp({
 
             return image
         },
+        contactImage() {
+            const {contact} = this.contacts;
+            const avatar = contact.avatar;
+
+            let image = `img/avatar${avatar}.jpg`;
+
+            return image
+        }
     },
 });
 
