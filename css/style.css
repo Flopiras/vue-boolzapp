@@ -31,6 +31,10 @@
     background-color: var(--section-bgr);
 }
 
+li{
+    list-style: none;
+}
+
 
 /* BACKGROUND */
 #background{
