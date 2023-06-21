@@ -1,0 +1,17 @@
+/* TEMPORARY */
+main{
+    border: 2px solid black;
+}
+
+/* BACKGROUND */
+#background{
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* MAIN */
+main{
+    height: calc(100vh - 40px);
+    width: 1200px;
+}
