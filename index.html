@@ -26,17 +26,24 @@
         <main class="container ">
             <div class="row h-100">
                 <div id="contacts-side" class="col-4">
+                    <!-- user section -->
                     <section id="user" class="p-2 media">
+                        <!-- left side -->
                         <div class="media-left">
+                            <!-- image -->
                             <img class="avatar mx-2" :src="contactImage(user)" :alt="user.name">
+                            <!-- name -->
                             <span class="h6">{{ user.name }}</span>
                         </div>
+                        <!-- right side -->
                         <div class="media-right">
+                            <!-- icons -->
                             <i class="fa-solid fa-circle-notch fa-xl mx-2"></i>
                             <i class="fa-solid fa-message fa-xl mx-2"></i>
                             <i class="fa-solid fa-ellipsis-vertical fa-xl mx-2"></i>
                         </div>
                     </section>
+                    <!-- notifications section -->
                     <section id="notifications" class="d-flex p-2">
                         <div id="bell" class="mx-2">
                             <i class="fa-solid fa-bell-slash fa-xl"></i>
@@ -46,6 +53,7 @@
                             <a href="#">Attiva notifiche desktop</a>
                         </div>
                     </section>
+                    <!-- search section -->
                     <section id="search" class="p-2">
                         <div class="input-group mb-3">
                             <span class="input-group-text border-end-0" id="basic-addon1"><i
@@ -54,17 +62,23 @@
                                 aria-describedby="basic-addon1">
                         </div>
                     </section>
+                    <!-- contact section -->
                     <section id="contacts">
                         <ul>
+                            <!-- contacts -->
                             <li v-for="contact in contacts" class="border-bottom d-flex">
+                                <!-- image -->
                                 <img class="avatar m-2" :src="contactImage(contact)" :alt="contact.name">
+                                <!-- name -->
                                 <h6>{{ contact.name }}</h6>
                             </li>
                         </ul>
                     </section>
 
                 </div>
+                <!-- chat side -->
                 <div id="chat-side" class="col-8">
+                    <!-- header chat -->
                     <section id="header-chat" class="p-2 media">
                         <div class="media-left">
                             <img class="avatar mx-2" :src="contactImage(contacts[0])" :alt="contacts[0].name">
@@ -79,7 +93,9 @@
                             <i class="fa-solid fa-ellipsis-vertical fa-xl mx-2"></i>
                         </div>
                     </section>
+                    <!-- main chat -->
                     <section id="main-chat" class="p-2"></section>
+                    <!-- footer chat -->
                     <section id="footer-chat" class="p-2"></section>
 
                 </div>
