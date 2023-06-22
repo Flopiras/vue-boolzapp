@@ -206,7 +206,9 @@ const app = Vue.createApp({
 
     }
   },
-   
+  computed: {
+
+  },
   methods: {
     getContactImage(contact) {
             const avatar = contact.avatar;
