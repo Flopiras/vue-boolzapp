@@ -229,7 +229,17 @@ const app = Vue.createApp({
             // return textMessage
       });
       return textMessage
+    },
+    sendNewMessage(contact) {
+      const date = Math.floor(Date.now());
+      const newMessage = {
+        date,
+        message: this.newMessage,
+        status: 'sent'
+      }
+      contact.messages.push(newMessage)
 
+      this.newMessage = '';
     }
   }
 });

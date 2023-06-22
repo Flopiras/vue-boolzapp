@@ -101,7 +101,6 @@
                             <li v-for="message in contact.messages" v-text="message.message" class="message my-2 shadow"
                                 :class="message.status">
                             </li>
-                            <li class="message sent" v-show="newMessage.length">{{newMessage}}</li>
                         </ul>
                     </section>
                     <!-- footer chat -->
@@ -111,8 +110,8 @@
                                 <i class="fa-regular fa-face-smile fa-xl ms-3"></i>
                             </div>
                             <div class="col-10">
-                                <input v-model="newMessage" type="text" class="form-control my-2"
-                                    placeholder="Scrivi un messaggio">
+                                <input v-model="newMessage" @keyup.enter="sendNewMessage(contact)" type="text"
+                                    class="form-control my-2" placeholder="Scrivi un messaggio">
                             </div>
 
                             <div class="col-1">
