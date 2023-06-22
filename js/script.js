@@ -210,6 +210,7 @@ const app = Vue.createApp({
 
   },
   methods: {
+    // estrapolare le immagini dei contatti
     getContactImage(contact) {
             const avatar = contact.avatar;
 
@@ -217,16 +218,16 @@ const app = Vue.createApp({
 
             return image
     },
-
+    // settare il contatto corrente
     setCurrentContact(targetContact) {
       this.currentContact = targetContact;
     },
-    
+    // data attuale
     getCurrentDate() {
         const date = new Date();
         return date.toLocaleString();
     },
-
+    // ricezione di una risposta automatica
     receiveNewMessage(contact) {
       const date = this.getCurrentDate();
 
@@ -237,7 +238,7 @@ const app = Vue.createApp({
       }
       contact.messages.push(newMessage)
     },
-
+    // invio di un messaggio scritto dall'utente
     sendNewMessage(contact) {
       const date = this.getCurrentDate();
       const newMessage = {

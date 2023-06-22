@@ -99,7 +99,9 @@
                         <ul class="d-flex flex-column">
                             <!-- messages -->
                             <li v-for="message in contact.messages" class="message my-2 shadow" :class="message.status">
+                                <!--text message  -->
                                 <p>{{ message.message }}</p>
+                                <!-- date -->
                                 <p class="date">{{ message.date }}</p>
                             </li>
                         </ul>
@@ -107,14 +109,16 @@
                     <!-- footer chat -->
                     <section id="footer-chat" class="p-2 container-fluid">
                         <div class=" row justify-content-center align-items-center">
+                            <!-- emoji -->
                             <div class="col-1">
                                 <i class="fa-regular fa-face-smile fa-xl ms-3"></i>
                             </div>
+                            <!-- text -->
                             <div class="col-10">
                                 <input v-model="newMessage" @keyup.enter="sendNewMessage(contact)" type="text"
                                     class="form-control my-2" placeholder="Scrivi un messaggio">
                             </div>
-
+                            <!-- recorder -->
                             <div class="col-1">
                                 <i class="fa-solid fa-microphone fa-xl"></i>
                             </div>
