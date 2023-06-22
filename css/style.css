@@ -110,6 +110,7 @@ main{
 #contacts li{
     justify-content: flex-start;
     align-items: center;
+    cursor: pointer;
 }
 
 /* chat-side */
