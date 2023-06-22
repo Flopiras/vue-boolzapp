@@ -145,6 +145,7 @@ main{
 
 .message.sent{
     align-self: flex-end;
+    text-align: end;
     background-color: var(--sent-message);
 }
 
