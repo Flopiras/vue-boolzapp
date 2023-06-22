@@ -221,9 +221,15 @@ const app = Vue.createApp({
     setCurrentContact(targetContact) {
       this.currentContact = targetContact;
     },
+    
+    getCurrentDate() {
+        const date = new Date();
+        return date.toLocaleString();
+    },
 
     receiveNewMessage(contact) {
-      const date = Math.floor(Date.now());
+      const date = this.getCurrentDate();
+
       const newMessage = {
         date,
         message: 'Ok',
@@ -233,7 +239,7 @@ const app = Vue.createApp({
     },
 
     sendNewMessage(contact) {
-      const date = Math.floor(Date.now());
+      const date = this.getCurrentDate();
       const newMessage = {
         date,
         message: this.newMessage,
