@@ -58,15 +58,15 @@
                         <div class="input-group mb-3">
                             <span class="input-group-text border-end-0" id="basic-addon1"><i
                                     class="fa-solid fa-magnifying-glass"></i></span>
-                            <input type="text" class="form-control" placeholder="  Cerca o inizia una nuova chat"
-                                aria-describedby="basic-addon1">
+                            <input v-model="filter" type="text" class="form-control"
+                                placeholder="  Cerca o inizia una nuova chat" aria-describedby="basic-addon1">
                         </div>
                     </section>
                     <!-- contact section -->
                     <section id="contacts">
                         <ul>
                             <!-- contacts -->
-                            <li v-for="(contact, i) in contacts" class="border-bottom d-flex"
+                            <li v-for="(contact, i) in filteredContacts" class="border-bottom d-flex"
                                 @click="setCurrentContact(i)">
                                 <!-- image -->
                                 <img class="avatar m-2" :src="getContactImage(contact)" :alt="contact.name">

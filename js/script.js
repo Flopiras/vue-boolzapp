@@ -6,6 +6,7 @@ const app = Vue.createApp({
     return{
       currentContact: 0,
       newMessage: '',
+      filter: '',
       user: {
           name: 'Floriana',
           avatar: '_io'
@@ -207,7 +208,13 @@ const app = Vue.createApp({
     }
   },
   computed: {
+    filteredContacts() {
 
+      const name = this.filter.toLowerCase();
+
+      const filteredContacts= this.contacts.filter((contact) => contact.name.toLowerCase().includes(name));
+      return filteredContacts;
+  }
   },
   methods: {
     // estrapolare le immagini dei contatti
