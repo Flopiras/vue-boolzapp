@@ -222,15 +222,6 @@ const app = Vue.createApp({
       this.currentContact = targetContact;
     },
 
-    getMessages(targetContact) {
-      let textMessage = '';
-      contact.messages.forEach(message => {
-        textMessage = message.message;
-            // return textMessage
-      });
-      return textMessage
-    },
-
     receiveNewMessage(contact) {
       const date = Math.floor(Date.now());
       const newMessage = {
