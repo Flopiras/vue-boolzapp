@@ -230,6 +230,17 @@ const app = Vue.createApp({
       });
       return textMessage
     },
+
+    receiveNewMessage(contact) {
+      const date = Math.floor(Date.now());
+      const newMessage = {
+        date,
+        message: 'Ok',
+        status: 'received'
+      }
+      contact.messages.push(newMessage)
+    },
+
     sendNewMessage(contact) {
       const date = Math.floor(Date.now());
       const newMessage = {
@@ -240,6 +251,7 @@ const app = Vue.createApp({
       contact.messages.push(newMessage)
 
       this.newMessage = '';
+      setTimeout(receiveNewMessage(contact), 1000);
     }
   }
 });
