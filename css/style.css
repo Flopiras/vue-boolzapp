@@ -17,6 +17,13 @@
     background-color: var(--section-bgr);
 }
 
+#user,
+#notifications,
+#header-chat,
+#footer-chat{
+    height: 70px;
+}
+
 li{
     list-style: none;
 }
@@ -89,7 +96,7 @@ main{
 
 #contacts{
     overflow-y: scroll;
-    /* height: calc((100vh - 40px) - 190px); */
+    height: calc((100vh - 40px) - 215px);
     background-color: white;
 }
 
