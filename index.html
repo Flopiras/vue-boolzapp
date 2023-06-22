@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- Vue JS -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="js/data.js"></script>
 
     <!-- JavaScript -->
     <script defer src="js/script.js"></script>
@@ -25,11 +24,11 @@
 <body>
     <div id="root" class=" d-flex">
         <main class="container ">
-            <div class="row">
+            <div class="row h-100">
                 <div id="contacts-side" class="col-4">
                     <section id="user" class="d-flex p-2">
                         <div class="user-left">
-                            <img class="avatar mx-2" :src="userImage" :alt="user.name">
+                            <img class="avatar mx-2" :src="contactImage(user)" :alt="user.name">
                             <span class="h6">{{ user.name }}</span>
                         </div>
                         <div class="user-right">
