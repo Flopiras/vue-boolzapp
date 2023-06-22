@@ -34,6 +34,21 @@ img.avatar{
     border-radius: 50%;
 }
 
+.media{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.media-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.media-right{
+    color: var(--icons-light);
+}
 
 /* BACKGROUND */
 #root{
@@ -52,15 +67,6 @@ main{
 #contacts-side{
     padding: 0;
     border-right: 1px solid var(--icons-light);
-}
-/* user */
-#user{
-    justify-content: space-between;
-    align-items: center;
-}
-
-.user-right{
-    color: var(--icons-light);
 }
 
 /* notifications */

@@ -26,12 +26,12 @@
         <main class="container ">
             <div class="row h-100">
                 <div id="contacts-side" class="col-4">
-                    <section id="user" class="d-flex p-2">
-                        <div class="user-left">
+                    <section id="user" class="p-2 media">
+                        <div class="media-left">
                             <img class="avatar mx-2" :src="contactImage(user)" :alt="user.name">
                             <span class="h6">{{ user.name }}</span>
                         </div>
-                        <div class="user-right">
+                        <div class="media-right">
                             <i class="fa-solid fa-circle-notch fa-xl mx-2"></i>
                             <i class="fa-solid fa-message fa-xl mx-2"></i>
                             <i class="fa-solid fa-ellipsis-vertical fa-xl mx-2"></i>
@@ -65,7 +65,20 @@
 
                 </div>
                 <div id="chat-side" class="col-8">
-                    <section id="header-chat" class="p-2"></section>
+                    <section id="header-chat" class="p-2 media">
+                        <div class="media-left">
+                            <img class="avatar mx-2" :src="contactImage(contacts[0])" :alt="contacts[0].name">
+                            <div>
+                                <p class="h6">{{ contacts[0].name }}</p>
+                                <p>Ultimo accesso oggi alle</p>
+                            </div>
+                        </div>
+                        <div class="media-right">
+                            <i class="fa-solid fa-magnifying-glass fa-xl mx-2"></i>
+                            <i class="fa-solid fa-paperclip fa-xl mx-2"></i>
+                            <i class="fa-solid fa-ellipsis-vertical fa-xl mx-2"></i>
+                        </div>
+                    </section>
                     <section id="main-chat" class="p-2"></section>
                     <section id="footer-chat" class="p-2"></section>
 
