@@ -5,6 +5,7 @@ const app = Vue.createApp({
   data() {
     return{
       currentContact: 0,
+      newMessage: '',
       user: {
           name: 'Floriana',
           avatar: '_io'

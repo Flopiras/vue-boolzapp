@@ -140,6 +140,11 @@ main{
     background-color: white;
 }
 
+/* footer-chat */
 #footer-chat{
     background-color: var(--text-section);
+}
+
+#footer-chat i{
+    color: var(--icons-dark);
 }
