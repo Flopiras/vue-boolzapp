@@ -7,6 +7,7 @@
     --text-section: #F3EEEA;
     --icons-light: #B1B1B1;
     --icons-dark: #6B7376;
+    --sent-message: #D5F9BA;
 }
 
 /* GENERAL */
@@ -116,10 +117,27 @@ main{
     padding: 0;
 }
 
+/* messages */
 #main-chat{
     background-image: url(../img/mine.jpg) ;
     overflow-y: scroll;
     height: calc((100vh - 40px) - 145px);
+}
+
+.message{
+    padding: 1rem;
+    border-radius: 20px;
+    
+}
+
+.message.sent{
+    align-self: flex-end;
+    background-color: var(--sent-message);
+}
+
+.message.received{
+    align-self: flex-start;
+    background-color: white;
 }
 
 #footer-chat{

@@ -96,8 +96,9 @@
                     </section>
                     <!-- main chat -->
                     <section id="main-chat" class="p-2">
-                        <ul>
-                            <li v-for="message in contact.messages" v-text="message.message" class="message"
+                        <ul class="d-flex flex-column">
+                            <!-- messages -->
+                            <li v-for="message in contact.messages" v-text="message.message" class="message my-2 shadow"
                                 :class="message.status">
                             </li>
                         </ul>
