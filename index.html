@@ -31,7 +31,7 @@
                         <!-- left side -->
                         <div class="media-left">
                             <!-- image -->
-                            <img class="avatar mx-2" :src="contactImage(user)" :alt="user.name">
+                            <img class="avatar mx-2" :src="getContactImage(user)" :alt="user.name">
                             <!-- name -->
                             <span class="h6">{{ user.name }}</span>
                         </div>
@@ -66,9 +66,10 @@
                     <section id="contacts">
                         <ul>
                             <!-- contacts -->
-                            <li v-for="contact in contacts" class="border-bottom d-flex">
+                            <li v-for="(contact, i) in contacts" class="border-bottom d-flex"
+                                @click="setCurrentContact(i)">
                                 <!-- image -->
-                                <img class="avatar m-2" :src="contactImage(contact)" :alt="contact.name">
+                                <img class="avatar m-2" :src="getContactImage(contact)" :alt="contact.name">
                                 <!-- name -->
                                 <h6>{{ contact.name }}</h6>
                             </li>
@@ -77,13 +78,13 @@
 
                 </div>
                 <!-- chat side -->
-                <div id="chat-side" class="col-8">
+                <div id="chat-side" class="col-8" v-for="(contact, i) in contacts" v-show="currentContact === i">
                     <!-- header chat -->
                     <section id="header-chat" class="p-2 media">
                         <div class="media-left">
-                            <img class="avatar mx-2" :src="contactImage(contacts[0])" :alt="contacts[0].name">
+                            <img class="avatar mx-2" :src="getContactImage(contact)" :alt="contacts.name">
                             <div>
-                                <p class="h6">{{ contacts[0].name }}</p>
+                                <p class="h6">{{ contact.name }}</p>
                                 <p>Ultimo accesso oggi alle</p>
                             </div>
                         </div>
@@ -94,7 +95,12 @@
                         </div>
                     </section>
                     <!-- main chat -->
-                    <section id="main-chat" class="p-2"></section>
+                    <section id="main-chat" class="p-2">
+                        <ul>
+                            <li>
+                            </li>
+                        </ul>
+                    </section>
                     <!-- footer chat -->
                     <section id="footer-chat" class="p-2"></section>
 

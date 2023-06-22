@@ -1,14 +1,15 @@
 console.log('Vue ok', Vue);
 
 const app = Vue.createApp({
-    name: 'Boolzap',
-    data() {
-        return{
-            user: {
-                name: 'Floriana',
-                avatar: '_io'
-              },
-            contacts: [
+  name: 'Boolzap',
+  data() {
+    return{
+      currentContact: 0,
+      user: {
+          name: 'Floriana',
+          avatar: '_io'
+        },
+      contacts: [
                 {
                   id: 1,
                   name: 'Michele',
@@ -199,21 +200,35 @@ const app = Vue.createApp({
                     }
                   ],
                 }
-              ],
+        ],
 
 
-        }
-    },
+    }
+  },
    
-    methods: {
-        contactImage(contact) {
+  methods: {
+    getContactImage(contact) {
             const avatar = contact.avatar;
 
             let image = `img/avatar${avatar}.jpg`;
 
             return image
-        }
+    },
+
+    setCurrentContact(targetContact) {
+      this.currentContact = targetContact;
+    },
+
+    getMessages() {
+      let textMessage = '';
+      contact.messages.forEach(message => {
+        textMessage = message.message;
+            // return textMessage
+      });
+      return textMessage
+
     }
+  }
 });
 
 app.mount('#root');
