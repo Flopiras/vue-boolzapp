@@ -242,7 +242,9 @@ const app = Vue.createApp({
       contact.messages.push(newMessage)
 
       this.newMessage = '';
-      setTimeout(receiveNewMessage(contact), 1000);
+      setTimeout(() => {
+        this.receiveNewMessage(contact)
+      }, 1000);
     }
   }
 });
