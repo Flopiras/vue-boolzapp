@@ -98,8 +98,9 @@
                     <section id="main-chat" class="p-2">
                         <ul class="d-flex flex-column">
                             <!-- messages -->
-                            <li v-for="message in contact.messages" v-text="message.message" class="message my-2 shadow"
-                                :class="message.status">
+                            <li v-for="message in contact.messages" class="message my-2 shadow" :class="message.status">
+                                <p>{{ message.message }}</p>
+                                <p class="date">{{ message.date }}</p>
                             </li>
                         </ul>
                     </section>

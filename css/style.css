@@ -126,10 +126,21 @@ main{
 }
 
 .message{
-    padding: 1rem;
+    padding: 1rem 1rem 0 1rem;
     border-radius: 20px;
     max-width: 50%;
     
+}
+
+.message p{
+    margin-bottom: 0.5rem;
+    
+}
+
+.message .date{
+    font-size: 0.7rem;
+    color: var(--icons-dark);
+    text-align: end;
 }
 
 .message.sent{
