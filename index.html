@@ -67,7 +67,7 @@
                         <ul>
                             <!-- contacts -->
                             <li v-for="(contact, i) in filteredContacts" class="border-bottom d-flex"
-                                @click="setCurrentContact(i)">
+                                @click="setcurrentContactIndex(i)">
                                 <!-- image -->
                                 <img class="avatar m-2" :src="getContactImage(contact)" :alt="contact.name">
                                 <!-- name -->
@@ -78,13 +78,13 @@
 
                 </div>
                 <!-- chat side -->
-                <div id="chat-side" class="col-8" v-for="(contact, i) in contacts" v-show="currentContact === i">
+                <div id="chat-side" class="col-8">
                     <!-- header chat -->
                     <section id="header-chat" class="p-2 media">
                         <div class="media-left">
-                            <img class="avatar mx-2" :src="getContactImage(contact)" :alt="contacts.name">
+                            <img class="avatar mx-2" :src="getContactImage(activeContact)" :alt="activeContact.name">
                             <div>
-                                <p class="h6">{{ contact.name }}</p>
+                                <p class="h6">{{ activeContact.name }}</p>
                                 <p>Ultimo accesso oggi alle</p>
                             </div>
                         </div>
@@ -98,7 +98,8 @@
                     <section id="main-chat" class="p-2">
                         <ul class="d-flex flex-column">
                             <!-- messages -->
-                            <li v-for="message in contact.messages" class="message my-2 shadow" :class="message.status">
+                            <li v-for="message in activeContact.messages" class="message my-2 shadow"
+                                :class="message.status">
                                 <!--text message  -->
                                 <p>{{ message.message }}</p>
                                 <!-- date -->
@@ -115,7 +116,7 @@
                             </div>
                             <!-- text -->
                             <div class="col-10">
-                                <input v-model="newMessage" @keyup.enter="sendNewMessage(contact)" type="text"
+                                <input v-model="newMessage" @keyup.enter="sendNewMessage()" type="text"
                                     class="form-control my-2" placeholder="Scrivi un messaggio">
                             </div>
                             <!-- recorder -->

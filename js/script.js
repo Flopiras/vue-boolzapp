@@ -4,7 +4,7 @@ const app = Vue.createApp({
   name: 'Boolzap',
   data() {
     return{
-      currentContact: 0,
+      currentContactIndex: 0,
       newMessage: '',
       filter: '',
       user: {
@@ -203,8 +203,6 @@ const app = Vue.createApp({
                   ],
                 }
         ],
-
-
     }
   },
   computed: {
@@ -214,6 +212,9 @@ const app = Vue.createApp({
 
       const filteredContacts= this.contacts.filter((contact) => contact.name.toLowerCase().includes(name));
       return filteredContacts;
+  },
+  activeContact(){
+    return this.filteredContacts[this.currentContactIndex]
   }
   },
   methods: {
@@ -226,8 +227,8 @@ const app = Vue.createApp({
             return image
     },
     // settare il contatto corrente
-    setCurrentContact(targetContact) {
-      this.currentContact = targetContact;
+    setcurrentContactIndex(targetContact) {
+      this.currentContactIndex = targetContact;
     },
     // data attuale
     getCurrentDate() {
@@ -235,7 +236,7 @@ const app = Vue.createApp({
         return date.toLocaleString();
     },
     // ricezione di una risposta automatica
-    receiveNewMessage(contact) {
+    receiveNewMessage() {
       const date = this.getCurrentDate();
 
       const newMessage = {
@@ -243,21 +244,21 @@ const app = Vue.createApp({
         message: 'Ok',
         status: 'received'
       }
-      contact.messages.push(newMessage)
+      this.activeContact.messages.push(newMessage)
     },
     // invio di un messaggio scritto dall'utente
-    sendNewMessage(contact) {
+    sendNewMessage() {
       const date = this.getCurrentDate();
       const newMessage = {
         date,
         message: this.newMessage,
         status: 'sent'
       }
-      contact.messages.push(newMessage)
+      this.activeContact.messages.push(newMessage)
 
       this.newMessage = '';
       setTimeout(() => {
-        this.receiveNewMessage(contact)
+        this.receiveNewMessage()
       }, 1000);
     }
   }
